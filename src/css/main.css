@@ -20,7 +20,7 @@ label {
 }
 
 .homepage-google-map {
-  height: 400px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -1102,4 +1102,13 @@ a, a:hover {
 }
 #logo-text {
 color: #7fc929;
+}
+
+.mapImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50%;
 }
