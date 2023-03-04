@@ -1095,3 +1095,11 @@ a, a:hover {
     max-width: 30px;
   }
 }
+
+
+#logo {
+  width: 20vw;
+}
+#logo-text {
+color: #7fc929;
+}
