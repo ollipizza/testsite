@@ -51,8 +51,33 @@
       document.getElementById('language-home').innerHTML = language[lang].home;
       document.getElementById('language-english').innerHTML = language[lang].english;
       document.getElementById('language-chinese').innerHTML = language[lang].chinese;
-      document.getElementById('navbarDropdown').innerHTML = lang === 'english' ? language[lang].english : language[lang].chinese;
 
+      document.getElementById('onTheMove').innerHTML = language[lang].onTheMove;
+      document.getElementById('onTheMove1').innerHTML = language[lang].onTheMove;
+      document.getElementById('onTheMove2').innerHTML = language[lang].onTheMove;
+      document.getElementById('onTheMove3').innerHTML = language[lang].onTheMove;
+
+      document.getElementById('navbarDropdown').innerHTML = lang === 'english' ? language[lang].english : language[lang].chinese;
+      document.getElementById('ordernow').innerHTML = language[lang].orderNow;
+      document.getElementById('ordernow1').innerHTML = language[lang].orderNow;
+      document.getElementById('ordernow2').innerHTML = language[lang].orderNow;
+      document.getElementById('ordernow3').innerHTML = language[lang].orderNow;
+      document.getElementById('aboutUsTitle').innerHTML = language[lang].aboutUsTitle
+      document.getElementById('traditionPassion').innerText = language[lang].traditionPassion
+
+      if (lang === 'english') {
+        document.getElementById('traditionPassion').style.fontFamily = 'Fredericka the Great'
+      } else {
+      document.getElementById('traditionPassion').style.fontFamily = 'chineseFont'
+      }
+
+
+      document.getElementById('openingHoursTitle').innerHTML = language[lang].openingHoursTitle
+      document.getElementById('openingHours').innerHTML = language[lang].openingHours
+      document.getElementById('location').innerHTML = language[lang].location
+      document.getElementById('address').innerHTML = language[lang].address
+      document.getElementById('followUs').innerHTML = language[lang].followUs
+      document.getElementById('rights').innerHTML = language[lang].rights
 
 console.log('test')
     }
@@ -199,10 +224,12 @@ console.log('test')
             <h1 class="brand-title display-2 animated fadeInDown">
               <image id="logo" src="./media/logo/logo.png"></image>
             </h1>
-            <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
+            <h4 id="logo-text" class="brand-description animated fadeInDown" >
+              <p id="onTheMove"></p>
+            </h4>
             <a class="mt-3 btn btn-light animated fadeInUp"
               href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-              role="button">Order Now</a>
+              role="button" id="ordernow"></a>
           </div>
         </div>
         <div class="dark-overlay carousel-item">
@@ -212,10 +239,12 @@ console.log('test')
             <h1 class="brand-title display-2 animated fadeInDown">
               <image id="logo" src="./media/logo/logo.png"></image>
             </h1>
-            <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
+            <h4 id="logo-text" class="brand-description animated fadeInDown" tagname="onTheMove">
+              <p id="onTheMove1"></p>
+            </h4>
             <a class="mt-3 btn btn-light animated fadeInUp"
               href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-              role="button">Order Now</a>
+              role="button" id="ordernow1"></a>
           </div>
         </div>
         <div class="dark-overlay carousel-item">
@@ -226,10 +255,12 @@ console.log('test')
               <h1 class="brand-title display-2 animated fadeInDown">
                 <image id="logo" src="./media/logo/logo.png"></image>
               </h1>
-              <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
+              <h4 id="logo-text" class="brand-description animated fadeInDown">
+                <p id="onTheMove2"></p>
+              </h4>
               <a class="mt-3 btn btn-light animated fadeInUp"
                 href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-                role="button">Order Now</a>
+                role="button" id="ordernow2"></a>
             </div>
           </div>
         </div>
@@ -241,10 +272,12 @@ console.log('test')
               <h1 class="brand-title display-2 animated fadeInDown">
                 <image id="logo" src="./media/logo/logo.png"></image>
               </h1>
-              <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
+              <h4 id="logo-text" class="brand-description animated fadeInDown">
+                <p id="onTheMove3"></p>
+              </h4>
               <a class="mt-3 btn btn-light animated fadeInUp"
                 href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-                role="button">Order Now</a>
+                role="button" id="ordernow3"></a>
             </div>
           </div>
         </div>
@@ -358,8 +391,8 @@ console.log('test')
         data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1535893044/website-template-3/homepage-about-us.jpg"
         alt="" class="homepage-about-us-bg lazyload">
       <div class="homepage-about-us-caption">
-        <h2 class="special-title-1">ABOUT US</h2>
-        <h3 class="special-title-2">Tradition &amp; Passion</h3>
+        <h2 class="special-title-1" id="aboutUsTitle"></h2>
+        <h3 class="special-title-2" id="traditionPassion"></h3>
         <div id="about-description">
           <p class="homepage-about-us-description" id="language-aboutus">
 
@@ -602,15 +635,14 @@ console.log('test')
       </a>
       <div class="row">
         <div class="col-md-3">
-          <h5 class="page-footer-title">OPENING HOURS</h5>
-          <p class="mb-0">Open daily from 14pm - 22pm</p>
+          <h5 class="page-footer-title" id="openingHoursTitle"></h5>
+          <p class="mb-0" id="openingHours"></p>
         </div>
         <div class="col-md-3 h-100 border-left-custom">
-          <h5 class="page-footer-title mt-3 mt-md-0">LOCATION</h5>
+          <h5 class="page-footer-title mt-3 mt-md-0" id="location"></h5>
           <a href="https://goo.gl/maps/PgfVivYpX2c2yf2T9" target="_blank">
-            <address>
-              Olli Pizza Bar &amp; Seafood Restaurant<br>
-              235, New Taipei City, Zhonghe District, Heping St, 36號1 樓<br>
+            <address id="address">
+  
 
 
 
@@ -620,7 +652,7 @@ console.log('test')
           </a>
         </div>
         <div class="col-md-3 h-100 border-left-custom">
-          <h5 class="page-footer-title mt-3 mt-md-0">FOLLOW US</h5>
+          <h5 class="page-footer-title mt-3 mt-md-0" id="followUs"></h5>
           <div class="mb-3">
             <a href="https://github.com/PictureElement" src="./media/brand/LINE_Brand_icon.png">
               <image class="footer-social" src="./media/brand/LINE_Brand_icon.png"></image>
@@ -645,7 +677,7 @@ console.log('test')
           </div> -->
       </div>
     </div>
-    <div class="page-footer-copyright container-fluid text-center">
+    <div class="page-footer-copyright container-fluid text-center" id="rights">
       © 2023 Olli Pizza All rights reserved.<br>
       <!-- Design &amp; Development by <a href="https://pictureelement.github.io/portfolio-2/">PictureElement</a> (Marios Sofokleous). -->
     </div>
