@@ -1,41 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/svg" href="./media/logo/logoPure.svg"/>
 
-    <title>Olli Pizza &amp; Restaurant | Free Bootstrap Website Template</title>
-    <!-- Web app manifest -->
-    <link rel='manifest' href='manifest.json'>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- Default stylesheet -->
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body id="top">
-    <header>
-      <!-- NAVBAR -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand animated pulse" href="#">
-          <img src="media/brand/logo-dark.svg" width="30" height="30" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
+<head>
+
+  <!-- <base href="C:/Dev/Projects/Olli2/grecko-master/src/language"/> -->
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <link rel="icon" type="image/svg" href="./media/logo/pecat.svg" />
+
+  <title>Olli Pizza &amp; Restaurant | Free Bootstrap Website Template</title>
+  <!-- Web app manifest -->
+  <link rel='manifest' href='manifest.json'>
+  <!-- Font Awesome -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&family=Rampart+One&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Default stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="top">
+
+  <script src="language/language.js"></script>
+  <script>
+
+
+    if (localStorage.getItem('language') === null) {
+      localStorage.setItem('language', 'english')
+    }
+
+
+    function setLanguage(lang,) {
+
+      localStorage.setItem('language', lang);
+
+
+      document.getElementById('language-aboutus').innerHTML = language[lang].aboutUs;
+      document.getElementById('language-home').innerHTML = language[lang].home;
+      document.getElementById('language-english').innerHTML = language[lang].english;
+      document.getElementById('language-chinese').innerHTML = language[lang].chinese;
+
+      document.getElementById('onTheMove').innerHTML = language[lang].onTheMove;
+      document.getElementById('onTheMove1').innerHTML = language[lang].onTheMove;
+      document.getElementById('onTheMove2').innerHTML = language[lang].onTheMove;
+      document.getElementById('onTheMove3').innerHTML = language[lang].onTheMove;
+
+      document.getElementById('navbarDropdown').innerHTML = lang === 'english' ? language[lang].english : language[lang].chinese;
+      document.getElementById('ordernow').innerHTML = language[lang].orderNow;
+      document.getElementById('ordernow1').innerHTML = language[lang].orderNow;
+      document.getElementById('ordernow2').innerHTML = language[lang].orderNow;
+      document.getElementById('ordernow3').innerHTML = language[lang].orderNow;
+      document.getElementById('aboutUsTitle').innerHTML = language[lang].aboutUsTitle
+      document.getElementById('traditionPassion').innerText = language[lang].traditionPassion
+
+      if (lang === 'english') {
+        document.getElementById('traditionPassion').style.fontFamily = 'Fredericka the Great'
+      } else {
+      document.getElementById('traditionPassion').style.fontFamily = 'chineseFont'
+      }
+
+
+      document.getElementById('openingHoursTitle').innerHTML = language[lang].openingHoursTitle
+      document.getElementById('openingHours').innerHTML = language[lang].openingHours
+      document.getElementById('location').innerHTML = language[lang].location
+      document.getElementById('address').innerHTML = language[lang].address
+      document.getElementById('followUs').innerHTML = language[lang].followUs
+      document.getElementById('rights').innerHTML = language[lang].rights
+
+console.log('test')
+    }
+
+
+
+
+
+  </script>
+  <header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand animated pulse" href="#">
+        <img src="media/logo/pecat.svg" width="30" height="30" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" id="language-home">
+              <script>
+                let selLanguage = localStorage.getItem('language')
+                addEventListener("load", (event) => { });
+                onload = (event) => {
+                  selLanguage = localStorage.getItem('language')
+                  setLanguage(selLanguage)
+                };
+              </script> 
+              <span class="sr-only">(current)</span></a>
+          </li>
+        <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="pages/food.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Menu
               </a>
@@ -43,7 +119,8 @@
                 <a class="dropdown-item" href="pages/food.html">Food</a>
                 <a class="dropdown-item" href="pages/desserts.html">Desserts</a>
                 <a class="dropdown-item" href="pages/drinks.html">Drinks</a>
-              </div>
+              </div> -->
+                <!-- 
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pages/about.html">About</a>
@@ -56,106 +133,168 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="pages/contact.html">Contact</a>
+            </li> -->
+
+            <li class="nav-item dropdown" id="language-menu">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <script>
+                  selLanguage = localStorage.getItem('language')
+                 addEventListener("load", (event) => { });
+                 onload = (event) => {
+                   selLanguage = localStorage.getItem('language')
+                   setLanguage(selLanguage)
+                 };
+               </script> 
+              </a>
+              <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item"  onclick="setLanguage('english')" id="language-english">
+                  <script>
+                     selLanguage = localStorage.getItem('language')
+                    addEventListener("load", (event) => { });
+                    onload = (event) => {
+                      selLanguage = localStorage.getItem('language')
+                      setLanguage(selLanguage)
+                    };
+                  </script> 
+                  </a>
+                  <a class="dropdown-item"  onclick="setLanguage('chinese')" id="language-chinese">
+                    <script>
+                       selLanguage = localStorage.getItem('language')
+                      addEventListener("load", (event) => { });
+                      onload = (event) => {
+                        selLanguage = localStorage.getItem('language')
+                        setLanguage(selLanguage)
+                      };
+                    </script> 
+                    </a>
+              </div>
             </li>
-          </ul>
+          <!-- <li class="nav-item" id="chose-language">
+            <a class="nav-link"  onclick="setLanguage('english')" id="language-english">
+              <script>
+                 selLanguage = localStorage.getItem('language')
+                addEventListener("load", (event) => { });
+                onload = (event) => {
+                  selLanguage = localStorage.getItem('language')
+                  setLanguage(selLanguage)
+                };
+              </script> 
+              </a>
+
+          </li>
+          <li  id="chose-language">
+            <a class="nav-link"  onclick="setLanguage('chinese')" id="language-chinese">
+                <script>
+                   selLanguage = localStorage.getItem('language')
+                  addEventListener("load", (event) => { });
+                  onload = (event) => {
+                    selLanguage = localStorage.getItem('language')
+                    setLanguage(selLanguage)
+                  };
+                </script> 
+                </a>
+
+            <div id="div1"></div>
+          </li> -->
+          <!-- </ul>
           <div class="ml-auto">
             <a class="nav-social mr-2" href="https://github.com/PictureElement"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a class="nav-social mr-2" href="https://github.com/PictureElement"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
             <a class="nav-social mr-2" href="https://github.com/PictureElement"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             <a class="nav-social" href="https://github.com/PictureElement"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-
-      <!-- COVER -->
-      <div id="cover" class="cover carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#cover" data-slide-to="0" class="active"></li>
-          <li data-target="#cover" data-slide-to="1"></li>
-          <li data-target="#cover" data-slide-to="2"></li>
-          <li data-target="#cover" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="dark-overlay carousel-item active">
-            <img
-              sizes="(max-width: 2560px) 100vw, 2560px"
-              srcset="
-              ./media/pizza/engBreakfastCut.jpg 320w"
-              src="./media/pizza/engBreakfastCut.jpg"
-              alt="First slide">
-            <div class="carousel-caption">
-              <h1 class="brand-title display-2 animated fadeInDown" >
-                <image id="logo" src="./media/logo/logo.svg"></image>
-                </h1>
-              <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
-              <a class="mt-3 btn btn-light animated fadeInUp" href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs" role="button">Order Now</a>
-            </div>
-          </div>
-          <div class="dark-overlay carousel-item">
-            <img
-              sizes="(max-width: 2560px) 100vw, 2560px"
-              srcset="
-              ./media/pizza/bucke.jpg 320w"
-              src="./media/pizza/bucke.jpg"
-              alt="Second slide">
-            <div class="carousel-caption">
-              <h1 class="brand-title display-2 animated fadeInDown" >
-                <image id="logo" src="./media/logo/logo.svg"></image>
-                </h1>
-              <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
-              <a class="mt-3 btn btn-light animated fadeInUp" href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs" role="button">Order Now</a>
-            </div>
-          </div>
-          <div class="dark-overlay carousel-item">
-            <img
-              sizes="(max-width: 2560px) 100vw, 2560px"
-              srcset="
-              ./media/pizza/fruttiDiMare.jpg 320w"
-              src="./media/pizza/fruttiDiMare.jpg"
-              alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1 class="brand-title display-2 animated fadeInDown" >
-                  <image id="logo" src="./media/logo/logo.svg"></image>
-                  </h1>
-                <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
-                <a class="mt-3 btn btn-light animated fadeInUp" href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs" role="button">Order Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="dark-overlay carousel-item">
-            <img
-              sizes="(max-width: 2560px) 100vw, 2560px"
-              srcset="
-              ./media/pizza/pesto.jpg 320w"
-              src="./media/pizza/pesto.jpg"
-              alt="Fourth slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1 class="brand-title display-2 animated fadeInDown" >
-                  <image id="logo" src="./media/logo/logo.svg"></image>
-                  </h1>
-                <h4 id="logo-text" class="brand-description animated fadeInDown">...on the Move</h4>
-                <a class="mt-3 btn btn-light animated fadeInUp" href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs" role="button">Order Now</a>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#cover" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#cover" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+          </div> -->
       </div>
+    </nav>
+  </header>
+  <main>
+
+    <!-- COVER -->
+    <div id="cover" class="cover carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#cover" data-slide-to="0" class="active"></li>
+        <li data-target="#cover" data-slide-to="1"></li>
+        <li data-target="#cover" data-slide-to="2"></li>
+        <li data-target="#cover" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="dark-overlay carousel-item active">
+          <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
+              ./media/pizza/engBreakfastCut.jpg 320w" src="./media/pizza/engBreakfastCut.jpg" alt="First slide">
+          <div class="carousel-caption">
+            <h1 class="brand-title display-2 animated fadeInDown">
+              <image id="logo" src="./media/logo/logo.png"></image>
+            </h1>
+            <h4 id="logo-text" class="brand-description animated fadeInDown" >
+              <p id="onTheMove"></p>
+            </h4>
+            <a class="mt-3 btn btn-light animated fadeInUp"
+              href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
+              role="button" id="ordernow"></a>
+          </div>
+        </div>
+        <div class="dark-overlay carousel-item">
+          <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
+              ./media/pizza/bucke.jpg 320w" src="./media/pizza/bucke.jpg" alt="Second slide">
+          <div class="carousel-caption">
+            <h1 class="brand-title display-2 animated fadeInDown">
+              <image id="logo" src="./media/logo/logo.png"></image>
+            </h1>
+            <h4 id="logo-text" class="brand-description animated fadeInDown" tagname="onTheMove">
+              <p id="onTheMove1"></p>
+            </h4>
+            <a class="mt-3 btn btn-light animated fadeInUp"
+              href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
+              role="button" id="ordernow1"></a>
+          </div>
+        </div>
+        <div class="dark-overlay carousel-item">
+          <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
+              ./media/pizza/fruttiDiMare.jpg 320w" src="./media/pizza/fruttiDiMare.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="brand-title display-2 animated fadeInDown">
+                <image id="logo" src="./media/logo/logo.png"></image>
+              </h1>
+              <h4 id="logo-text" class="brand-description animated fadeInDown">
+                <p id="onTheMove2"></p>
+              </h4>
+              <a class="mt-3 btn btn-light animated fadeInUp"
+                href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
+                role="button" id="ordernow2"></a>
+            </div>
+          </div>
+        </div>
+        <div class="dark-overlay carousel-item">
+          <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
+              ./media/pizza/pesto.jpg 320w" src="./media/pizza/pesto.jpg" alt="Fourth slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="brand-title display-2 animated fadeInDown">
+                <image id="logo" src="./media/logo/logo.png"></image>
+              </h1>
+              <h4 id="logo-text" class="brand-description animated fadeInDown">
+                <p id="onTheMove3"></p>
+              </h4>
+              <a class="mt-3 btn btn-light animated fadeInUp"
+                href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
+                role="button" id="ordernow3"></a>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#cover" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#cover" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
 
 
-      <!-- MENU -->
-      <div class="homepage-menu container text-center">
+    <!-- MENU -->
+    <!-- <div class="homepage-menu container text-center">
         <div class="row">
           <div class="col-md-4 homepage-food">
             <h3 class="special-title-2">Food</h3>
@@ -215,13 +354,14 @@
             </div>
           </div>
         </div>
-      </div>
-      
-      <!-- ABOUT US -->
-      <div class="homepage-about-us dark-overlay text-white">
-        <img
-          sizes="(max-width: 2560px) 100vw, 2560px"
-          data-srcset="
+      </div> -->
+
+
+
+    <!-- ABOUT US -->
+    <div class="homepage-about-us dark-overlay text-white">
+      <img sizes="(max-width: 2560px) 100vw, 2560px"
+        data-srcset="
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_320/v1535893044/website-template-3/homepage-about-us.jpg 320w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_514/v1535893044/website-template-3/homepage-about-us.jpg 514w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_674/v1535893044/website-template-3/homepage-about-us.jpg 674w,
@@ -248,34 +388,30 @@
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2551/v1535893044/website-template-3/homepage-about-us.jpg 2551w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2554/v1535893044/website-template-3/homepage-about-us.jpg 2554w,
             https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1535893044/website-template-3/homepage-about-us.jpg 2560w"
-          data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1535893044/website-template-3/homepage-about-us.jpg"
-          alt=""
-          class="homepage-about-us-bg lazyload">
-        <div class="homepage-about-us-caption">
-          <h2 class="special-title-1">ABOUT US</h2>
-          <h3 class="special-title-2">Tradition &amp; Passion</h3>
-          <div id="about-description">
-            <p class="homepage-about-us-description">
-              Welcome to the pizza shop on wheels! Experience a unique pizza story where our customers can watch their pizzas being freshly baked right in front of their eyes on our custom-built Pizza bicycle.
+        data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1535893044/website-template-3/homepage-about-us.jpg"
+        alt="" class="homepage-about-us-bg lazyload">
+      <div class="homepage-about-us-caption">
+        <h2 class="special-title-1" id="aboutUsTitle"></h2>
+        <h3 class="special-title-2" id="traditionPassion"></h3>
+        <div id="about-description">
+          <p class="homepage-about-us-description" id="language-aboutus">
 
-Our story began with a desire to create a fun and interactive way for customers to enjoy pizza. We wanted to break away from the traditional brick-and-mortar pizza shops and instead, bring our pizza to the streets. With our custom-built bicycle oven, we are able to travel to different locations and serve up hot, delicious pizzas to hungry customers.
-
-We use only the freshest ingredients to make our pizzas. Our dough is made from scratch and we use only the finest tomatoes, cheeses, and toppings to create the perfect pizza. We take pride in using locally-sourced ingredients whenever possible, which not only supports our community but also ensures that our pizzas are as fresh and delicious as possible.
-
-At our pizza shop on the bicycle, we believe that great food should be accessible to everyone. That's why we offer a range of pizza options to suit every taste. Whether you're a meat lover, or vegetarian, we have a pizza that's perfect for you.
-We take pride in providing excellent customer service and making sure that our customers are satisfied with every bite of their pizza.
-We are committed to making a positive impact in our community. In addition to preparing and baking our pizzas on bicycle we also source our ingredients locally, we also strive to minimise our environmental impact by using eco-friendly packaging and practising sustainable methods whenever possible.
-
-Thank you for choosing our pizza shop on the bicycle. We look forward to serving you and bringing you the best pizza you've ever tasted, baked fresh on our custom-built Pizza bicycle!
-
-            </p>
-            <a class="btn btn-outline-light" href="pages/about.html" role="button">OUR STORY</a>
-          </div>
+            <script>
+               selLanguage = localStorage.getItem('language')
+              addEventListener("load", (event) => { });
+              onload = (event) => {
+                selLanguage = localStorage.getItem('language')
+                setLanguage(selLanguage)
+              };
+            </script>
+          </p>
+          <!-- <a class="btn btn-outline-light" href="pages/about.html" role="button">OUR STORY</a> -->
         </div>
       </div>
+    </div>
 
-      <!-- SPECIAL OFFERS -->
-      <div class="homepage-special-offers container">
+    <!-- SPECIAL OFFERS -->
+    <!-- <div class="homepage-special-offers container">
         <h2 class="special-title-1 text-center">SPECIALS &amp; EVENTS</h2>
         <h3 class="special-title-2 text-center">Hurry Up</h3>
         <div class="row">
@@ -347,10 +483,10 @@ Thank you for choosing our pizza shop on the bicycle. We look forward to serving
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- TESTIMONIALS -->
-      <div class="homepage-testimonials dark-overlay text-center">
+    <!-- TESTIMONIALS -->
+    <!-- <div class="homepage-testimonials dark-overlay text-center">
         <img
           sizes="(max-width: 2560px) 100vw, 2560px"
           data-srcset="
@@ -481,56 +617,53 @@ Thank you for choosing our pizza shop on the bicycle. We look forward to serving
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- GOOGLE MAP -->
-      <div id="googleMapContainer" class="homepage-google-map">
-        <a
-        href="https://goo.gl/maps/PgfVivYpX2c2yf2T9"
-        target="_blank"
-      >
-        <img class="mapImg"
-        src="./media/map/map.PNG"
-  
-        />
+    <!-- GOOGLE MAP -->
+    <div id="googleMapContainer" class="homepage-google-map">
+      <a href="https://goo.gl/maps/PgfVivYpX2c2yf2T9" target="_blank">
+        <img class="mapImg" src="./media/map/map.PNG" />
       </a>
-      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer class="page-footer">
-      <div class="container">
-        <a class="navbar-brand animated pulse d-block text-center m-0 p-0" href="#">
-          <img src="media/brand/logo-light.svg" width="50" height="50" alt="Logo">
-        </a>
-        <div class="row">
-          <div class="col-md-3">
-            <h5 class="page-footer-title">OPENING HOURS</h5>
-            <p class="mb-0">Open daily from 8am</p> 
-            <p class="mb-0">Bar: Daily from 8am - 12pm</p> 
-            <p class="mb-0">Breakfast: Daily from 8am - 11am</p> 
-            <p class="mb-0">Lunch: Daily from 12pm - 3pm</p>
-            <p>Dinner: Daily from 6pm - 12pm</p>
-          </div>
-          <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">LOCATION</h5>
-            <address>
-              Olli Pizza Bar &amp; Seafood Restaurant<br>
-              24 Akti Kampani St.<br>
-              846 00, Mykonos, Greece<br>
-              <abbr title="Phone">P:</abbr> (123) 456-7890<br>
-              <abbr title="Email">E:</abbr> info@Olli Pizza.com
+  <footer class="page-footer">
+    <div class="container">
+      <a class="navbar-brand animated pulse d-block text-center m-0 p-0" href="#">
+        <img src="media/logo/pecat.svg" width="50" height="50" alt="Logo">
+      </a>
+      <div class="row">
+        <div class="col-md-3">
+          <h5 class="page-footer-title" id="openingHoursTitle"></h5>
+          <p class="mb-0" id="openingHours"></p>
+        </div>
+        <div class="col-md-3 h-100 border-left-custom">
+          <h5 class="page-footer-title mt-3 mt-md-0" id="location"></h5>
+          <a href="https://goo.gl/maps/PgfVivYpX2c2yf2T9" target="_blank">
+            <address id="address">
+  
+
+
+
+              <!-- <abbr title="Phone">P:</abbr> (123) 456-7890<br>
+              <abbr title="Email">E:</abbr> info@Olli Pizza.com -->
             </address>
+          </a>
+        </div>
+        <div class="col-md-3 h-100 border-left-custom">
+          <h5 class="page-footer-title mt-3 mt-md-0" id="followUs"></h5>
+          <div class="mb-3">
+            <a href="https://github.com/PictureElement" src="./media/brand/LINE_Brand_icon.png">
+              <image class="footer-social" src="./media/brand/LINE_Brand_icon.png"></image>
+
+              </i>
+            </a>
+            <!-- <a class="footer-social" href="https://github.com/PictureElement" aria-label="tripadvisor"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+              <a class="footer-social" href="https://github.com/PictureElement" aria-label="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
           </div>
-          <div class="col-md-3 h-100 border-left-custom">
-            <h5 class="page-footer-title mt-3 mt-md-0">FOLLOW US</h5>
-            <div class="mb-3">
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="tripadvisor"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-              <a class="footer-social" href="https://github.com/PictureElement" aria-label="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <div class="col-md-3 h-100 border-left-custom">
+        </div>
+        <!-- <div class="col-md-3 h-100 border-left-custom">
             <h5 class="page-footer-title mt-3 mt-md-0">NEWSLETTER</h5>
             <p>
               Complete the form to receive information on the latest events,
@@ -541,34 +674,32 @@ Thank you for choosing our pizza shop on the bicycle. We look forward to serving
               <input type="email" class="form-control form-control-sm rounded" id="formEmail" placeholder="name@example.com">
               <button type="submit" class="btn btn-sm btn-outline-light btn-block mt-2">Subscribe</button>
             </form>
-          </div>
-        </div>
+          </div> -->
       </div>
-      <div class="page-footer-copyright container-fluid text-center">
-        © 2018 Olli Pizza ...on the Move. All rights reserved.<br>
-        Design &amp; Development by <a href="https://pictureelement.github.io/portfolio-2/">PictureElement</a> (Marios Sofokleous).
-      </div>
-    </footer>
-    <a id="back-to-top" class="back-to-top smooth-scroll" href="#top">
-      <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-    </a>
-    <!-- lazySizes -->
-    <script src="js/lazysizes.min.js" async=""></script>
-    <!-- jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous">
+    </div>
+    <div class="page-footer-copyright container-fluid text-center" id="rights">
+      © 2023 Olli Pizza All rights reserved.<br>
+      <!-- Design &amp; Development by <a href="https://pictureelement.github.io/portfolio-2/">PictureElement</a> (Marios Sofokleous). -->
+    </div>
+  </footer>
+  <a id="back-to-top" class="back-to-top smooth-scroll" href="#top">
+    <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+  </a>
+  <!-- lazySizes -->
+  <script src="js/lazysizes.min.js" async=""></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
     </script>
-    <!-- Bootstrap -->
-    <script 
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
-      crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script src="js/site.js"></script>
-    <script src="js/homepage-animations.js"></script>
-  </body>
+  <script src="js/site.js"></script>
+  <script src="js/homepage-animations.js"></script>
+
+</body>
+
 </html>
 
 <!-- 

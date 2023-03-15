@@ -2,17 +2,25 @@
  * GLOBAL
  */
 
+ @font-face {
+  font-family: "chineseFont";
+  src: url("../font/Chinese Trad Taiwan Kai.ttf");
+}
+
 html {
   font-size: 1rem;
 }
 
 body {
-  font-size: 1rem;
+  /* font-family: 'Noto Serif TC', serif; */
+  font-family: "chineseFont";
+  font-size: 1.5rem;
   color: #404040;
   line-height: 1.75;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
   font-weight: 400;
   padding-top: 62px;
+  
 }
 
 label {
@@ -158,6 +166,13 @@ a, a:hover {
 
 .nav-link, .dropdown-item {
   font-weight: 700;
+  color: red;
+
+}
+
+#language-menu {
+  position: absolute;
+  right: 20px;
 }
 
 /*
@@ -394,20 +409,21 @@ a, a:hover {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: #007bff;
+  /* background-color: #007bff; */
   transition: all 0.3s ease-in-out;
   text-align: center;
   line-height: 47px;
   border-radius: 50%;
+  color-scheme: light only;
 }
 
 .footer-social:hover {
-  background-color: #0069d9;
+  /* background-color: #0069d9; */
   transform: scale(1.1) rotate(360deg);
 }
 
 .footer-social i {
-  color: #fff;
+  /* color: #fff; */
   font-size: 20px;
 }
 
