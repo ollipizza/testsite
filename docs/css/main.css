@@ -180,9 +180,12 @@ a, a:hover {
  */
 
  .cover .carousel-item > img {
+  display: block;
   max-width: 100%;
   /* height: calc(100vh - 62px); */
   object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cover .carousel-caption {
@@ -1132,7 +1135,7 @@ a, a:hover {
 
 
 #logo {
-  width: 20vw;
+  width: 40vw;
 }
 #logo-text {
 color: #7fc929;
