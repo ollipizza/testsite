@@ -38,9 +38,9 @@
 
 
     if (localStorage.getItem('language') === null) {
-      localStorage.setItem('language', 'english')
+      localStorage.setItem('language', 'chinese')
     }
-
+    let selLanguage = localStorage.getItem('language')
 
     function setLanguage(lang,) {
 
@@ -65,6 +65,7 @@
       document.getElementById('aboutUsTitle').innerHTML = language[lang].aboutUsTitle
       document.getElementById('traditionPassion').innerText = language[lang].traditionPassion
 
+      
       if (lang === 'english') {
         document.getElementById('traditionPassion').style.fontFamily = 'Fredericka the Great'
       } else {
@@ -80,9 +81,6 @@
       document.getElementById('rights').innerHTML = language[lang].rights
 
     }
-
-
-
 
 
   </script>
@@ -101,12 +99,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="#" id="language-home">
               <script>
-                let selLanguage = localStorage.getItem('language')
-                addEventListener("load", (event) => { });
-                onload = (event) => {
-                  selLanguage = localStorage.getItem('language')
-                  setLanguage(selLanguage)
-                };
+                  document.getElementById('language-home').innerHTML = language[selLanguage].home;
               </script> 
               <span class="sr-only">(current)</span></a>
           </li>
@@ -137,60 +130,32 @@
             <li class="nav-item dropdown" id="language-menu">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <script>
-                  selLanguage = localStorage.getItem('language')
-                 addEventListener("load", (event) => { });
-                 onload = (event) => {
-                   selLanguage = localStorage.getItem('language')
-                   setLanguage(selLanguage)
-                 };
+                  document.getElementById('navbarDropdown').innerHTML = selLanguage === 'english' ? language[selLanguage].english : language[selLanguage].chinese;
                </script> 
               </a>
               <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item"  onclick="setLanguage('english')" id="language-english">
                   <script>
-                     selLanguage = localStorage.getItem('language')
-                    addEventListener("load", (event) => { });
-                    onload = (event) => {
-                      selLanguage = localStorage.getItem('language')
-                      setLanguage(selLanguage)
-                    };
+                      document.getElementById('language-english').innerHTML = language[selLanguage].english;
                   </script> 
                   </a>
                   <a class="dropdown-item"  onclick="setLanguage('chinese')" id="language-chinese">
                     <script>
-                       selLanguage = localStorage.getItem('language')
-                      addEventListener("load", (event) => { });
-                      onload = (event) => {
-                        selLanguage = localStorage.getItem('language')
-                        setLanguage(selLanguage)
-                      };
+                        document.getElementById('language-chinese').innerHTML = language[selLanguage].chinese;
+                
                     </script> 
                     </a>
               </div>
             </li>
           <!-- <li class="nav-item" id="chose-language">
             <a class="nav-link"  onclick="setLanguage('english')" id="language-english">
-              <script>
-                 selLanguage = localStorage.getItem('language')
-                addEventListener("load", (event) => { });
-                onload = (event) => {
-                  selLanguage = localStorage.getItem('language')
-                  setLanguage(selLanguage)
-                };
-              </script> 
+            
               </a>
 
           </li>
           <li  id="chose-language">
             <a class="nav-link"  onclick="setLanguage('chinese')" id="language-chinese">
-                <script>
-                   selLanguage = localStorage.getItem('language')
-                  addEventListener("load", (event) => { });
-                  onload = (event) => {
-                    selLanguage = localStorage.getItem('language')
-                    setLanguage(selLanguage)
-                  };
-                </script> 
+       
                 </a>
 
             <div id="div1"></div>
@@ -230,11 +195,18 @@
               <image id="logo" src="./media/logo/logo.png"></image>
             </h1>
             <h4 id="logo-text" class="brand-description animated fadeInDown" >
-              <p id="onTheMove"></p>
+              <p id="onTheMove">
+                <script>
+                   document.getElementById('onTheMove').innerHTML = language[lang].onTheMove;
+                </script>
+              </p>
             </h4>
             <a class="mt-3 btn btn-light animated fadeInUp"
               href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-              role="button" id="ordernow"></a>
+              role="button" id="ordernow">
+            <script>
+                   document.getElementById('ordernow').innerHTML = language[selLanguage].orderNow;
+            </script></a>
           </div>
         </div>
         <div class="dark-overlay carousel-item">
@@ -251,11 +223,18 @@
               <image id="logo" src="./media/logo/logo.png"></image>
             </h1>
             <h4 id="logo-text" class="brand-description animated fadeInDown" tagname="onTheMove">
-              <p id="onTheMove1"></p>
+              <p id="onTheMove1">
+                <script>
+                   document.getElementById('onTheMove1').innerHTML = language[lang].onTheMove;
+                </script>
+              </p>
             </h4>
             <a class="mt-3 btn btn-light animated fadeInUp"
               href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-              role="button" id="ordernow1"></a>
+              role="button" id="ordernow1">
+            <script>
+                   document.getElementById('ordernow1').innerHTML = language[selLanguage].orderNow;
+            </script></a>
           </div>
         </div>
         <div class="dark-overlay carousel-item">
@@ -272,11 +251,18 @@
                 <image id="logo" src="./media/logo/logo.png"></image>
               </h1>
               <h4 id="logo-text" class="brand-description animated fadeInDown">
-                <p id="onTheMove2"></p>
+                <p id="onTheMove2">
+                  <script>
+                     document.getElementById('onTheMove2').innerHTML = language[lang].onTheMove;
+                  </script>
+                </p>
               </h4>
               <a class="mt-3 btn btn-light animated fadeInUp"
                 href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-                role="button" id="ordernow2"></a>
+                role="button" id="ordernow2">
+              <script>
+                     document.getElementById('ordernow2').innerHTML = language[selLanguage].orderNow;
+              </script></a>
             </div>
           </div>
         </div>
@@ -295,11 +281,18 @@
                 <image id="logo" src="./media/logo/logo.png"></image>
               </h1>
               <h4 id="logo-text" class="brand-description animated fadeInDown">
-                <p id="onTheMove3"></p>
+                <p id="onTheMove3">
+                  <script>
+                     document.getElementById('onTheMove3').innerHTML = language[lang].onTheMove;
+                  </script>
+                </p>
               </h4>
               <a class="mt-3 btn btn-light animated fadeInUp"
                 href="https://l.facebook.com/l.php?u=https%3A%2F%2Flinevoom.line.me%2Fuser%2F_dePvThKUjsSfoY-KdaDV7sLhSpneKuS1eNEwbjA%3Ffbclid%3DIwAR3E70p6UG0UzU87NJQP_4vSyIwwGwCVoDl7S7LG4jC5ZcrW8pNpvYJQxJk&h=AT0HbSU8zOrgdI0KKWTyZpnkZAomvaQXM3_6cktlnt1g2leHyMf1BtuIQt6M_reMQhPindw852zZzs6_hxFIVA-0Ac1tcCO-kRuU7gyWlkX99_8pZQzoZfFLP9hcQRuQrHo8kDnmeAjT5CD2KBs"
-                role="button" id="ordernow3"></a>
+                role="button" id="ordernow3">
+              <script>
+                     document.getElementById('ordernow3').innerHTML = language[selLanguage].orderNow;
+              </script></a>
             </div>
           </div>
         </div>
@@ -413,19 +406,26 @@
         data-src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1535893044/website-template-3/homepage-about-us.jpg"
         alt="" class="homepage-about-us-bg lazyload">
       <div class="homepage-about-us-caption">
-        <h2 class="special-title-1" id="aboutUsTitle"></h2>
+        <h2 class="special-title-1" id="aboutUsTitle">
+          <script>
+              document.getElementById('aboutUsTitle').innerHTML = language[selLanguage].aboutUsTitle
+          </script>
+        </h2>
 
-        <h3 class="special-title-2" id="traditionPassion"></h3>
+        <h3 class="special-title-2" id="traditionPassion">
+          <script>
+               document.getElementById('traditionPassion').innerText = language[selLanguage].traditionPassion
+      if (selLanguage === 'english') {
+        document.getElementById('traditionPassion').style.fontFamily = 'Fredericka the Great'
+      } else {
+      document.getElementById('traditionPassion').style.fontFamily = 'chineseFont'
+      }
+          </script>
+        </h3>
         <div id="about-description">
           <p class="homepage-about-us-description" id="language-aboutus">
-
             <script>
-               selLanguage = localStorage.getItem('language')
-              addEventListener("load", (event) => { });
-              onload = (event) => {
-                selLanguage = localStorage.getItem('language')
-                setLanguage(selLanguage)
-              };
+      document.getElementById('language-aboutus').innerHTML = language[selLanguage].aboutUs;
             </script>
           </p>
           <!-- <a class="btn btn-outline-light" href="pages/about.html" role="button">OUR STORY</a> -->
@@ -660,24 +660,40 @@
       </a>
       <div class="row">
         <div class="col-md-3">
-          <h5 class="page-footer-title" id="openingHoursTitle"></h5>
-          <p class="mb-0" id="openingHours"></p>
+          <h5 class="page-footer-title" id="openingHoursTitle">
+            <script>
+                  document.getElementById('openingHoursTitle').innerHTML = language[selLanguage].openingHoursTitle
+            </script>
+          </h5>
+          <p class="mb-0" id="openingHours">
+            <script>
+                    document.getElementById('openingHours').innerHTML = language[selLanguage].openingHours
+            </script>
+          </p>
         </div>
         <div class="col-md-3 h-100 border-left-custom">
-          <h5 class="page-footer-title mt-3 mt-md-0" id="location"></h5>
+          <h5 class="page-footer-title mt-3 mt-md-0" id="location">
+            <script>
+                          document.getElementById('location').innerHTML = language[selLanguage].location
+
+            </script>
+          </h5>
           <a href="https://goo.gl/maps/PgfVivYpX2c2yf2T9" target="_blank">
             <address id="address">
-  
-
-
-
+<script>
+                document.getElementById('address').innerHTML = language[selLanguage].address
+</script>
               <!-- <abbr title="Phone">P:</abbr> (123) 456-7890<br>
               <abbr title="Email">E:</abbr> info@Olli Pizza.com -->
             </address>
           </a>
         </div>
         <div class="col-md-3 h-100 border-left-custom">
-          <h5 class="page-footer-title mt-3 mt-md-0" id="followUs"></h5>
+          <h5 class="page-footer-title mt-3 mt-md-0" id="followUs">
+            <script>
+                            document.getElementById('followUs').innerHTML = language[selLanguage].followUs
+            </script>
+          </h5>
           <div class="mb-3">
             <a href="https://github.com/PictureElement" src="./media/brand/LINE_Brand_icon.png">
               <image class="footer-social" src="./media/brand/LINE_Brand_icon.png"></image>
@@ -703,7 +719,9 @@
       </div>
     </div>
     <div class="page-footer-copyright container-fluid text-center" id="rights">
-      © 2023 Olli Pizza All rights reserved.<br>
+<script>
+                document.getElementById('rights').innerHTML = language[selLanguage].rights
+</script>>
       <!-- Design &amp; Development by <a href="https://pictureelement.github.io/portfolio-2/">PictureElement</a> (Marios Sofokleous). -->
     </div>
   </footer>
