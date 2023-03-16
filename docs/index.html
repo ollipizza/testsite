@@ -79,7 +79,6 @@
       document.getElementById('followUs').innerHTML = language[lang].followUs
       document.getElementById('rights').innerHTML = language[lang].rights
 
-console.log('test')
     }
 
 
@@ -219,7 +218,12 @@ console.log('test')
       <div class="carousel-inner">
         <div class="dark-overlay carousel-item active">
           <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
-              ./media/pizza/engBreakfastCut.jpg 320w" src="./media/pizza/engBreakfastCut.jpg" alt="First slide">
+              ./media/pizza/pizza1.png 320w,
+              ./media/pizza/pizza1.png 618w,
+              ./media/pizza/pizza1.png 842w,
+              ./media/pizza/pizza1.png 1200w,
+              ./media/pizza/pizza1.png 1936w
+              " src="./media/pizza/pizza1.png" alt="First slide">
           <div class="carousel-caption">
             <h1 class="brand-title display-2 animated fadeInDown">
               <image id="logo" src="./media/logo/logo.png"></image>
@@ -234,7 +238,7 @@ console.log('test')
         </div>
         <div class="dark-overlay carousel-item">
           <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
-              ./media/pizza/bucke.jpg 320w" src="./media/pizza/bucke.jpg" alt="Second slide">
+          ./media/pizza/pizza2.png 320w" src="./media/pizza/pizza2.png" alt="Second slide">
           <div class="carousel-caption">
             <h1 class="brand-title display-2 animated fadeInDown">
               <image id="logo" src="./media/logo/logo.png"></image>
@@ -249,7 +253,7 @@ console.log('test')
         </div>
         <div class="dark-overlay carousel-item">
           <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
-              ./media/pizza/fruttiDiMare.jpg 320w" src="./media/pizza/fruttiDiMare.jpg" alt="Third slide">
+          ./media/pizza/pizza3.png 320w" src="./media/pizza/pizza3.png" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1 class="brand-title display-2 animated fadeInDown">
@@ -266,7 +270,7 @@ console.log('test')
         </div>
         <div class="dark-overlay carousel-item">
           <img sizes="(max-width: 2560px) 100vw, 2560px" srcset="
-              ./media/pizza/pesto.jpg 320w" src="./media/pizza/pesto.jpg" alt="Fourth slide">
+          ./media/pizza/pizza4.png 320w" src="./media/pizza/pizza4.png" alt="Fourth slide">
           <div class="container">
             <div class="carousel-caption">
               <h1 class="brand-title display-2 animated fadeInDown">
@@ -392,6 +396,7 @@ console.log('test')
         alt="" class="homepage-about-us-bg lazyload">
       <div class="homepage-about-us-caption">
         <h2 class="special-title-1" id="aboutUsTitle"></h2>
+
         <h3 class="special-title-2" id="traditionPassion"></h3>
         <div id="about-description">
           <p class="homepage-about-us-description" id="language-aboutus">
@@ -631,7 +636,9 @@ console.log('test')
   <footer class="page-footer">
     <div class="container">
       <a class="navbar-brand animated pulse d-block text-center m-0 p-0" href="#">
+        <div class="footer-pecat-bck">
         <img src="media/logo/pecat.svg" width="50" height="50" alt="Logo">
+      </div>
       </a>
       <div class="row">
         <div class="col-md-3">
